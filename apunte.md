@@ -207,6 +207,134 @@ perro.verInfo()
 - *Abstraccion:* Se trata de reducir el objeto (atributos y metodos) lo mas posible
 - *Modularidad:* Hace referencia a dividir el problema grande en varios mas chicos
 - *Encapsulamiento:* Se trata de resguardar los datos para que no sean accesibles por el usuario
-- *Polimorfismo:* La capacidad de un objeto de comportarse distinto del resto ante un metodo
+- **Polimorfismo:** La capacidad de un objeto de comportarse distinto del resto ante un metodo
   
-   
+## Funcionalidades
+**Herencia:** Al crear una clase se puede añadirle todas las propiedades de una clase existente y añadirle nuevas usando *extends*
+
+```js
+class perroC extends animal{
+    constructor(especie, edad, color, raza){
+        super(especie, edad, color);
+        this.raza = raza;
+    }
+}
+```
+Todo objeto de esta clase va a tener todas las funcionalidades y atributos de la clase animal, sumados a los de la clase perroC (definida asi ya que no se puede tener un objeto con el mismo nombre que la clase) usando **super()**
+
+
+
+**Metodos estaticos:**
+Al utilizar **static** a la hora de definir un metodo, este funcionara para la clase aunque aun no haya ningun objeto creado
+
+```js
+class perroC extends animal{
+    constructor(especie, edad, color, raza){
+        super(especie, edad, color);
+        this.raza = raza;
+    }
+    static ladrar(){
+        alert("WAW")
+    }
+}
+```
+
+
+**Metodos accesores:** 
+Se utilizan **Getters y setters** para modificar los atributos de una clase o obtener los valores establecidos
+
+```js
+//metodo de una clase
+set setRaza(newName){
+    this.raza = newName;
+}
+
+get getRaza(){
+    return this.raza;
+}
+```
+Luego de declararlos se utilizan asi:
+
+```js
+perro.setRaza = golden //cambiamos la raza a golden
+document.write(perro.getRaza); //devuelve "Golden" o la raza actual
+```
+
+---
+
+
+## Metodos de cadenas
+- **Concat()** Junta dos o mas cadenas y retorna una
+- **startsWith()** Si una cadena comienza con los caracteres de otra cadena devuelve true sino false
+- **includes()** verifica si una cadena puede encontrarse dentro de otra (devuelve ToF)
+- **indexOf()** Devuevle el indice del primer caracter de la cadena y si no existe devuelve -1
+- **lasIndexOf()** devuelve el ultimo indice del primer caracter de la cadena y si no existe devuelve -1
+
+
+- **padStart()** Rellena la cadena al principio con los caracteres deseados
+- **padEnd()** idem anterior pero a la inversa
+-  **repeat** devuelve la misma cadena pero repetida la cantidad
+
+
+
+- **split()**  Divide la cadena como le pidamos
+- **substring()** Nos retorna un pedazo de la cadena que selecciona
+- **toLowerCase** Convierte la cadena a minuscula
+- **toUpperCase()** Convierte la cadena a mayuscula
+- **toString()** Devuelve una cadena que representa a un objeto
+- **trim()** Elimina los espacios en blanco al principio y al final
+- **trimEnd()** Elimina los espacios en blanco al final 
+- **trimStart()** Elimina los espacios en blanco al principio
+- **valueOf()** Retorna el valor positivo de un objeto string
+
+---
+
+## Metodos de arrays
+
+### Transformadores
+
+- **pop()** Elimina el ultimo elemento del array y lo retorna
+- **shift()** Elimina el primer elemento del array y lo retorna
+- **push()** Agrega un elemento al final del array
+- **reverse()** Invierte los elementos de un array
+- **unshift()** Agrega uno o mas elementos al principio de un array y devuele la nueva longitud
+- **sort()** Ordena los elementos del array localmente y devuelve el array ordenado (alfabeticamente)
+- **splice()** cambia el contenido de un array eliminando elementos existentes y o agregando nuevos
+
+### Accesores
+
+- **join()** Une todos los elementos de una matriz u objeto
+- **slice()** Devuelve una parte del array dentro de un nuevo array
+- **metodos ya vistos en cadenas (toString(), indexOf(), lastIndexOf(), indcludes() )**
+
+### De repeticion
+
+- **filter()** Crea un nuevo array con todos los elementos que indiques
+- **forEach()** Ejecuta la funcion indicada una vez por cada elemento
+
+
+---
+
+## Objeto math
+
+### Metodos
+
+- **sqrt()** Devuelve la raiz cuadrada de un numero
+- **cbrt()** Devuelve la raiz cubica de un numero
+- **max()** Devuelve el mayor de cero o mas numeros
+- **min()** Devuelve el mas pequeño de cero o mas numeros
+- **random()** Devuelve un numero aleatorio entre 0 y 1
+- **round()** Devuelve el valor de un numero redondeado al entero mas cercano
+- **fround()** Devuelve la representacion flotante de precicion simple mas cercana
+- **floor()** Devuelve el mator entero menor o igual que un numero
+- **trunc()** Devuelve la parte entera de un numero eliminando la parte fraccionaria
+- 
+### Propiedades
+- **PI** Pi
+- **sqrt1_2** Raiz cuadrada de un medio o 1 sobre raiz de 2
+- **sqrt2** Raiz de 2
+- **E** Constante de euler
+- **LN2** Log natural de 2
+- **LN10** Log natural de 1o
+- **LOG2E** Log de e en base 2
+- **LOG10E** Log de e en base 10
