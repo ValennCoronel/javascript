@@ -338,3 +338,39 @@ document.write(perro.getRaza); //devuelve "Golden" o la raza actual
 - **LN10** Log natural de 1o
 - **LOG2E** Log de e en base 2
 - **LOG10E** Log de e en base 10
+
+
+---
+
+## Consola de JS
+
+Consiste en usar la consola para resolver problemas, la sintacis es console.funcion()
+
+### Funciones de registro
+
+- **assert()** Aparece un mensaje en consola si la afirmacion es falsa
+- **clear()** Limpia la consola
+- **error()** Muestra un mensaje de error en la consola
+- **info()** Emite un mensaje informatibo en la consola
+- **log()** Muestra un mensaje de depuracion (es posible colocar .log("%texto", css, css) para dar estilos)
+- **table()** Toma como argumento obligatiorio data (array o objeyo)y muestra una tabla con el indexado
+- **warm()** Emite una advertencia
+- **dir()** Devuelve el tipo de dato con informacion extra
+
+
+### Funciones de conteo
+
+- **count()** cuenta cuantas veces se ejecuta una funcion
+- **countReset()** Resetea la cuenta
+
+### Funciones de agrupacion
+
+- **group()** Crea un grupo dentro de la consola donde ejecutar codigo
+- **groupEnd()** Elimina el grupo
+- **GoupCollapsed()** Crea el grupo pero inicia cerrado
+
+### Funciones de temporizacion
+- **time()** Inicia un contador de tiempo
+- **timeLog()** Muestra el estado del contador
+- **timeEnd** Finaliza el contador
+
